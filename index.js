@@ -8,12 +8,12 @@ inquirer
     .prompt([
         {
             type: 'input',
-            message: 'What is your GitHub username?',
+            message: 'GitHub username?',
             name: 'github',
         },
         {
             type: 'input',
-            message: "What is your email address?",
+            message: "email address?",
             name: 'email',
         },
         {
@@ -28,7 +28,7 @@ inquirer
         },
         {
             type: 'list',
-            message: "What kind of license should your project have?",
+            message: "license",
             name: 'license',
             choices: ["MIT", "APACHE 2.0", "GPL 3.0", "BSD 3", "none"]
         },
@@ -44,12 +44,12 @@ inquirer
         },
         {
             type: 'input',
-            message: "What does the user need to know about using your repo?",
+            message: "tell the user how to use your repo",
             name: 'usage',
         },
         {
             type: 'input',
-            message: "What does the user need to know about contributing to your repo?",
+            message: "is Contribution allowed",
             name: 'contribution',
         },
     ])
