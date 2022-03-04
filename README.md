@@ -31,4 +31,4 @@ n/a
 If you have any questions about the repo, open an issue or contact me directly at ypr_tylerkeuler@aol.com. Youcan find more of my work at [Floki-themad](https://github.com/Floki-themad/).
 
 ## Example 
-[short demo showing how the program works](assets/Screen Recording 2022-03-04 at 1.29.05 PM.mov)
+[short demo showing how the program works](https://imgur.com/KhoZWMl)
