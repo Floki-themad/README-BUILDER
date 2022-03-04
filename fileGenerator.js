@@ -1,78 +1,70 @@
-var fileGenerator = require("./fileGenerator");
-var fs = require("fs");
-var inquirer = require('inquirer');
-
-// User questions
-let questions = [
-    {
-        type: "input",
-        message: "What is the title of your repository?",
-        name: "title"
-    },{
-        type: "input",
-        message: "Please give your logo information.",
-        name: "logo"
-    },{
-        type: "input",
-        message: "What is your GitHub user name?",
-        name: "userName"
-    },{
-        type: "input",
-        message: "Please give your GitHub profile link.",
-        name: "GitHub"
-    },{
-        type: "input",
-        message: "What is your email?",
-        name: "email"
-    },{
-        type: "list",
-        name: "license",
-        message: "Please select which license you would like to use.",
-        choices : [
-            "APACHE 2.O",
-            "BSD 3",
-            "GVL-GPL 3.0",
-            "MIT",
-            "None"
-        ],
-    },{
-        type: "input",
-        message: "Please describe the repository.",
-        name: "description"
-
-    },{
-        type: "input",
-        message: "Please state if others can contribute.",
-        name: "contribute"
-    },
-    {
-        type: "input",
-        message: "State your accomplishments.",
-        name: "accomplish"
-    },{
-        type: "input",
-        message: "Please state provide a screenshot (1 of 2).",
-        name: "scriptjs"
-    },{
-        type: "input",
-        message: "Please state provide a screenshot (2 of 2).",
-        name: "fileGnerator"
-    },
-    {
-        type: "input",
-        message: "Please state your end-goal.",
-        name: "endgoal"
-    }
-];
-
-// Function to write to my ReadMe.md file. //
-inquirer.prompt(questions).then(function(response) {
-    console.log(response);
+function fileGenerator(response) {
+    var content = `# ${response.title}
+    ##### (${response.GitHub}) 
+    [Email Me](${response.email})
+    #### ${response.license} All material must be cited or credited, when using material (free to use).
     
-     var content = fileGenerator(response);
-     console.log(content);
-      fs.writeFile("./ReadMe.md", content, function(err){
-          if (err) throw err
-          console.log("success");
-      });
- } ); 
+    ## Table of Contents
+    * [Repository Description](#Repository-Description)
+    * [Installation Instructions](#Install)
+    * [Usage Information](#Usage)
+
+    
+    # Repository Description
+    ###### [Back to Table of Contents](#Table-of-Contents)
+    ${response.description}
+    
+    
+    ## User Story
+    ###### [Back to Table of Contents](#Table-of-Contents)
+    1.   I a command-line application that accepts user input.
+    2.   I want to be prompted for information about my application repository.
+    3.   I want a high-quality, professional README.md is generated with the title of my project and sections entitled Description, Table of Contents, Installation, Usage, License, Contribution Guidelines, Tests Instructions, and Questions.
+    4.   I want my project title to display as the title of the README.
+    5.   I want a description, installation instructions, usage information, contribution guidelines, and test instructions; and then, this information is added to the sections of the README entitled Description, Installation, Usage, Contribution Guidelines, and Tests Instructions.
+    6.   I want to choose a license for my application from a list of options; and then a badge for that license is added near the top of the README and a notice is added to the section of the README entitled License that explains which license the application is covered under.  
+    7.   I want to enter my GitHub username; ant then this is added to the section of the README entitled Questions, with a link to my GitHub profile.
+    8.   I want to enter my email address; and then this is added to the section of the README entitled Questions, with instructions on how to reach me with additional questions.
+    9.   I want to click on the links in the Table of Contents; and then, I am taken to the corresponding section of the README.
+    
+    ### Contribution Guidelines
+    ###### [Back to Table of Contents](#Table-of-Contents)
+    ${response.contribute}
+    
+    
+    ## Test Instructions
+    ###### [Back to Table of Contents](#Table-of-Contents)
+    1.  ${response.test}
+    
+    
+    ## Overview: What We Accomplished!
+    ### Workflow [Back to Table of Contents](#Table-of-Contents)
+    ${response.accomplish}
+    
+    
+    ### Screenshots (Building this application)
+    ###### [Back to Table of Contents](#Table-of-Contents)
+    #### Demo I createad ![script.js](${response.scriptjs})
+    
+    #### Demo I createad ![fileGenerator.js](${response.fileGnerator})
+    
+    #### Demo I createad ![ReadMe.md](${response.ReadMe})
+    
+    
+    ## References
+    ###### [Back to Table of Contents](#Table-of-Contents)
+    1.  ${response.ref1}
+    
+    2.  ${response.ref2}
+    
+    ## Repositiory End-Goal Criterea
+    ###### [Back to Table of Contents](#Table-of-Contents)
+    ${response.endgoal}
+    
+    ## License
+    ${response.license}
+    
+    return content;
+};
+
+module.exports = fileGenerator;
