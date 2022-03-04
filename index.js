@@ -118,7 +118,7 @@ ${test}
 '''
 ...
 ## Questions
-If you have any questions about the repo, open an issue or contact me directly at ${email}. Youcan find more of my work at [${github}](https://github.com/${github}/).
+If you have any questions about the repo, please shoot me an email! ${email}. Find more of my work at [${github}](https://github.com/${github}/).
 `}
 
 // this appends the file README.md and calls the function to render it.
