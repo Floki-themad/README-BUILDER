@@ -35,3 +35,32 @@ let questions = [
             "MIT",
             "None"
         ],
+    },{
+        type: "input",
+        message: "Please describe the repository.",
+        name: "description"
+
+    },{
+        type: "input",
+        message: "Please state if others can contribute.",
+        name: "contribute"
+    },
+    {
+        type: "input",
+        message: "State your accomplishments.",
+        name: "accomplish"
+    },{
+        type: "input",
+        message: "Please state provide a screenshot (1 of 2).",
+        name: "scriptjs"
+    },{
+        type: "input",
+        message: "Please state provide a screenshot (2 of 2).",
+        name: "fileGnerator"
+    },
+    {
+        type: "input",
+        message: "Please state your end-goal.",
+        name: "endgoal"
+    }
+];
