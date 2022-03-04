@@ -3,7 +3,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-// calling inquirer. This will go though and prompt the user with questions
+// calling inquirer. will prompt user for input in the command line
 inquirer
     .prompt([
         {
@@ -54,17 +54,17 @@ inquirer
         },
     ])
 
-    // after all of the prompts have been given, the information the user inputs will be taken as data
+    //  the information the user inputs will be taken as data
     .then((data) => {
 
 // this function takes in the information given from the user and returns the contents of the readme.
         function renderReadme(title, license, description, install, usage, contribution, test, email, github) {
             
-            // declaring the variables that will be used in the function
+            // declaring function var
             let licenseBadge = "";
             let licenseDiscrption = ""
 
-            // this swtich will determine which license badge and license discription will be used based on what the user chose.
+            // swtich will determine which license badge and license discription will be used.
             switch (license) {
                 case "MIT": licenseBadge = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"
                     licenseDiscrption = "This project is licensed under the MIT license."
@@ -87,7 +87,7 @@ inquirer
             }
 
 
-// this returns the readme format and takes in the user input.
+// this returns the readme format.
             return `# ${title}
 ${licenseBadge}
 ## Description
@@ -98,6 +98,7 @@ ${description}
 * [License](#license)
 * [Contributing](#contributing)
 * [Tests](#tests)
+* [Example](#example)
 * [Questions](#questions)
 ## Installation
 To install necessary dependencies, run the following command:
@@ -115,12 +116,13 @@ To run tests, run the following command:
 '''
 ${test}
 '''
+...
 ## Questions
 If you have any questions about the repo, open an issue or contact me directly at ${email}. Youcan find more of my work at [${github}](https://github.com/${github}/).
 `}
 
 // this appends the file README.md and calls the function to render it.
-        fs.appendFile("README.md", (renderReadme(data.name, data.license, data.description, data.install, data.usage, data.contribution, data.test, data.email, data.github)), (err) =>
+        fs.appendFile("README.md", (renderReadme(data.name, data.license, data.description, data.install, data.usage, data.contribution, data.test, data.email, data.github, data.example)), (err) =>
             err ? console.log(err) : console.log("SUCCESS")
         );
 
