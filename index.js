@@ -10,10 +10,6 @@ let questions = [
         name: "title"
     },{
         type: "input",
-        message: "What is your GitHub user name?",
-        name: "userName"
-    },{
-        type: "input",
         message: "Please give your GitHub profile link.",
         name: "GitHub"
     },{
@@ -38,17 +34,25 @@ let questions = [
 
     },{
         type: "input",
+        message: "Installation Instructions",
+        name: "installation"
+    },{
+        type: "input",
         message: "Please state if others can contribute.",
         name: "contribute"
     },{
         type: "input",
-        message: "Please state any test(s) require (1/3).",
+        message: "Please state any test(s) require.",
         name: "test"
     },{
         type: "input",
         message: "Please provide a screenshot.",
         name: "scriptjs"
-    },
+    },{
+        type: "input",
+        message: "Questions?",
+        name: "questions"
+    }
 ];
 
 

@@ -1,14 +1,15 @@
 function fileGenerator(response) {
     var content = `# ${response.title}
     ##### (${response.GitHub}) 
-    [Email Me](${response.email})
     #### ${response.license} All material must be cited or credited, when using material (free to use).
     
     ## Table of Contents
-    * [Repository Description](#Repository-Description)
-    * [Installation Instructions](#Install)
-    * [Usage Information](#Usage)
-
+    * [Installation](#installation)  
+    * [Usage](#usage)
+    * [License](#license)
+    * [Contributing](#contributing)
+    * [Tests](#tests)
+    * [Questions](#questions)
     
     # Repository Description
     ###### [Back to Table of Contents](#Table-of-Contents)
@@ -50,16 +51,7 @@ function fileGenerator(response) {
     
     #### Demo I createad ![ReadMe.md](${response.ReadMe})
     
-    
-    ## References
-    ###### [Back to Table of Contents](#Table-of-Contents)
-    1.  ${response.ref1}
-    
-    2.  ${response.ref2}
-    
-    ## Repositiory End-Goal Criterea
-    ###### [Back to Table of Contents](#Table-of-Contents)
-    ${response.endgoal}
+
     
     ## License
     ${response.license}
