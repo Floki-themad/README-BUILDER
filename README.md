@@ -16,10 +16,10 @@
   ```
   * once the dependices are installed, navigate to the proper terminal and 
   run "node index.js" and fill in the prompts to generate a read me! 
-  * this is a screen shot of the prompts vv
-<img src = "README-BUILDER/img/Screen Shot 2022-06-21 at 12.20.37 PM.png">
+  * this is a screen shot of the prompts.
+<img src = "/Users/ada/code/homework/09-HW/README-BUILDER/img/Screen Shot 2022-06-21 at 12.20.37 PM.png">
 
 ## Below is a screenshot of a README built by the CLI application. 
-<img src = "README-BUILDER/img/Screen Shot 2022-06-21 at 12.32.36 PM.png">
+<img src = "/Users/ada/code/homework/09-HW/README-BUILDER/img/Screen Shot 2022-06-21 at 12.32.36 PM.png">
 
 ## [This link will take you to a video off the application in action](https://www.youtube.com/watch?v=r9eoUbmUPF0) 
