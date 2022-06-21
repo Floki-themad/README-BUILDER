@@ -22,4 +22,4 @@
 ## Below is a screenshot of a README built by the CLI application. 
 <img src = "/Users/ada/code/homework/09-HW/README-BUILDER/img/Screen Shot 2022-06-21 at 12.32.36 PM.png">
 
-## [This link will take you to a video off the application in action](https://www.youtube.com/watch?v=r9eoUbmUPF0) 
+## [This link will take you to a video of the application in action](https://www.youtube.com/watch?v=r9eoUbmUPF0) 
