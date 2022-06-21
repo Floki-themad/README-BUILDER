@@ -1,5 +1,5 @@
 
-// declaring variables that node will be accessing
+// declaring variables that node will be accessing dependinces 
 const inquirer = require('inquirer');
 const fs = require('fs');
 
